@@ -1,0 +1,79 @@
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: center; /* Center the grid items horizontally */
+}
+
+.product {
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    height: 400px; /* Set a consistent height for all product boxes */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically within the product box */
+    align-items: center; /* Center content horizontally within the product box */
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    max-height: 150px; /* Limit the height of the image to prevent it from growing too large */
+    margin-top: 1rem; /* Adjust the value as needed */
+    object-fit: contain; /* Ensure the image fits nicely within the bounds */
+}
+
+.product-info {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex-grow: 1; /* Allows the content to expand while keeping the layout centered */
+    justify-content: center; /* Centers the text within the available space */
+    align-items: center; /* Centers the text horizontally */
+}
+
+.product-price {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/*Config del modal*/
+
+.modal-image {
+    max-width: 100%;
+    max-height: 200px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/*Sidebar*/
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #f8f9fa;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1050; /* Make sure the sidebar is above other content */
+}
+
+.sidebar.open {
+    transform: translateX(0);
+}
+
+.sidebar .btn-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
